@@ -11,7 +11,7 @@ import io.smallrye.reactive.messaging.annotations.Emitter;
 import java.io.IOException;
 import java.time.LocalTime;
 import java.util.concurrent.CompletableFuture;
-import java.util.concurrent.ExecutionException;
+import java.util.concurrent.ExecutionException; 
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.TimeoutException;
 import javax.inject.Inject;
@@ -21,7 +21,7 @@ import org.eclipse.microprofile.reactive.messaging.Incoming;
 /**
  *
  * @author Mathias
- */
+ */ 
 public class Consumer {
 
     @Incoming("exit")
@@ -37,7 +37,7 @@ public class Consumer {
     }
 
     @Inject
-    ProducerTemplate camelProducer;
+    ProducerTemplate camelProducer; 
 
     public void consumeEntry(String content) throws IOException, InterruptedException, ExecutionException, TimeoutException, Exception {
         Gson gson = new Gson();
